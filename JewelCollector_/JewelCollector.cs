@@ -14,10 +14,19 @@ namespace JewelCollector_
 
             // Teste
             Jewel j = new Jewel(1,2, TypeJewel.BLUE);
-            Console.WriteLine("Joia adicionada: ");
-            string output = JsonConvert.SerializeObject(j,Formatting.Indented);
+            // Console.WriteLine("Joia adicionada: ");
+            // string output = JsonConvert.SerializeObject(j,Formatting.Indented);
+            // Console.WriteLine(output);
+
+
+            // 
+            Robot r = new Robot(5,5);
+            string output = JsonConvert.SerializeObject(r,Formatting.Indented);
             Console.WriteLine(output);
-            
+            r.bag.Add(j);
+            Console.WriteLine("Joia adicionada: ");
+            output = JsonConvert.SerializeObject(r,Formatting.Indented);
+            Console.WriteLine(output);
 
             do {
                 Console.WriteLine("Enter the command: ");
