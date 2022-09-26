@@ -18,5 +18,16 @@ namespace JewelCollector_
         {
             this.type_j = type_j;
         }
+
+        public static bool isJewel(string color){
+            bool ret = false;
+            string[] options = {"blue", "green", "red"}; 
+            foreach (var op in options){
+                if(color.ToLower().Equals(op))
+                    ret = true;
+            }
+
+            return ret;
+        }
     }
 }

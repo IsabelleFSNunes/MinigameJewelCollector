@@ -14,5 +14,25 @@ namespace JewelCollector_
             TypeJ tj = new TypeJ(t);
             this.tj = tj;
         }
+
+        public Jewel(int x, int y, string color): base(x,y)
+        {
+            if(color.ToLower().Equals("blue"))
+            {
+                TypeJ tj = new TypeJ(TypeJewel.BLUE);
+                this.tj = tj;
+            }
+            else if(color.ToLower().Equals("green"))
+            {
+                TypeJ tj = new TypeJ(TypeJewel.GREEN);
+                this.tj = tj;
+            }
+            
+            else if(color.ToLower().Equals("red"))
+            {
+                TypeJ tj = new TypeJ(TypeJewel.RED);
+                this.tj = tj;
+            }
+        }
     }
 }
